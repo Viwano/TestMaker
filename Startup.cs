@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace TestMakerFree
 {
@@ -21,6 +22,12 @@ namespace TestMakerFree
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            //using IOption<T>
+            //services.Configure<MySettings>(Configuration.GetSection("MySettings"));
+
+            //Manul binding configuration
+            services.AddSingleton(resolver => resolver.GetRequiredService<IOptions<MySettings>>().Value);
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -43,7 +50,18 @@ namespace TestMakerFree
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                OnPrepareResponse = (context) =>
+                {
+                    //disable caching  for all static files
+                    var conf = app.ApplicationServices.GetService<MySettings>();
+                    context.Context.Response.Headers["Cache-Control"] = conf.StaticFiles.Headers.CacheControl;
+                    context.Context.Response.Headers["pragma"] = conf.StaticFiles.Headers.Pragma;
+                    context.Context.Response.Headers["Expires"] = conf.StaticFiles.Headers.Expires;
+                }
+            });
+
             app.UseSpaStaticFiles();
 
             app.UseMvc(routes =>
