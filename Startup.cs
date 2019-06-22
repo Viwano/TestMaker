@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using TestMakerFree.Models;
 
 namespace TestMakerFree
 {
@@ -23,11 +24,16 @@ namespace TestMakerFree
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            //using IOption<T>
-            //services.Configure<MySettings>(Configuration.GetSection("MySettings"));
+            // Register the IOptions object
+            services.Configure<StaticFilesSettings>(Configuration.GetSection("StaticFiles"));
 
-            //Manul binding configuration
-            services.AddSingleton(resolver => resolver.GetRequiredService<IOptions<MySettings>>().Value);
+            // Explicitly register the settings object by delegating to the IOptions object
+            services.AddSingleton(resolver =>
+                resolver.GetRequiredService<IOptions<StaticFilesSettings>>().Value);
+
+            services.Configure<LogSettings>(Configuration.GetSection("Logging"));
+            services.AddSingleton(resolver => resolver.GetRequiredService<IOptions<LogSettings>>().Value);
+
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -50,17 +56,17 @@ namespace TestMakerFree
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles(new StaticFileOptions()
-            {
-                OnPrepareResponse = (context) =>
-                {
-                    //disable caching  for all static files
-                    var conf = app.ApplicationServices.GetService<MySettings>();
-                    context.Context.Response.Headers["Cache-Control"] = conf.StaticFiles.Headers.CacheControl;
-                    context.Context.Response.Headers["pragma"] = conf.StaticFiles.Headers.Pragma;
-                    context.Context.Response.Headers["Expires"] = conf.StaticFiles.Headers.Expires;
-                }
-            });
+            //app.UseStaticFiles(new StaticFileOptions()
+            //{
+            //    OnPrepareResponse = (context) =>
+            //    {
+            //        //disable caching  for all static files
+            //        var conf = app.ApplicationServices.GetService<StaticFilesSettings>();
+            //        var set = new StaticFilesSettings();
+            //        context.Context.Response.Headers["Cache-Control"] = set.CacheControl;
+            //        context.Context.Response.Headers["pragma"] = set.Pragma;
+            //        context.Context.Response.Headers["Expires"] = set.Expires;                }
+            //});
 
             app.UseSpaStaticFiles();
 
