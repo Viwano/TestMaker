@@ -25,12 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\app\components\quiz\quiz-list.component.ts" />
     <None Remove="ClientApp\src\app\interfaces\quiz.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\src\app\components\quiz\quiz-list.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\interfaces\quiz.ts" />
   </ItemGroup>
 
