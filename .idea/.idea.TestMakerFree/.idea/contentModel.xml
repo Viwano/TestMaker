@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Vahid\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Vahid\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_TestMakerFree.534420329.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Vahid\Source\repos\TestMaker" t="IncludeRecursive">
+      <e p=".gitignore" t="Include" />
+      <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="ClientApp" t="Include">
+        <e p=".angular-cli.json" t="Include" />
+        <e p=".editorconfig" t="Include" />
+        <e p=".gitignore" t="Include" />
+        <e p="e2e" t="Include">
+          <e p="app.e2e-spec.ts" t="Include" />
+          <e p="app.po.ts" t="Include" />
+          <e p="tsconfig.e2e.json" t="Include" />
+        </e>
+        <e p="karma.conf.js" t="Include" />
+        <e p="node_modules\@angular\animations" t="IncludeRecursive" />
+        <e p="node_modules\@angular\cli" t="IncludeRecursive" />
+        <e p="node_modules\@angular\common" t="IncludeRecursive" />
+        <e p="node_modules\@angular\compiler" t="IncludeRecursive" />
+        <e p="node_modules\@angular\compiler-cli" t="IncludeRecursive" />
+        <e p="node_modules\@angular\core" t="IncludeRecursive" />
+        <e p="node_modules\@angular\forms" t="IncludeRecursive" />
+        <e p="node_modules\@angular\http" t="IncludeRecursive" />
+        <e p="node_modules\@angular\platform-browser" t="IncludeRecursive" />
+        <e p="node_modules\@angular\platform-browser-dynamic" t="IncludeRecursive" />
+        <e p="node_modules\@angular\platform-server" t="IncludeRecursive" />
+        <e p="node_modules\@angular\router" t="IncludeRecursive" />
+        <e p="node_modules\@nguniversal\module-map-ngfactory-loader" t="IncludeRecursive" />
+        <e p="node_modules\@types" t="IncludeRecursive">
+          <e p="jasmine" t="IncludeRecursive" />
+          <e p="jasminewd2" t="IncludeRecursive" />
+          <e p="node" t="IncludeRecursive" />
+        </e>
+        <e p="node_modules\aspnet-prerendering" t="IncludeRecursive" />
+        <e p="node_modules\bootstrap" t="IncludeRecursive" />
+        <e p="node_modules\codelyzer" t="IncludeRecursive" />
+        <e p="node_modules\core-js" t="IncludeRecursive" />
+        <e p="node_modules\jasmine-core" t="IncludeRecursive" />
+        <e p="node_modules\jasmine-spec-reporter" t="IncludeRecursive" />
+        <e p="node_modules\karma" t="IncludeRecursive" />
+        <e p="node_modules\karma-chrome-launcher" t="IncludeRecursive" />
+        <e p="node_modules\karma-coverage-istanbul-reporter" t="IncludeRecursive" />
+        <e p="node_modules\karma-jasmine" t="IncludeRecursive" />
+        <e p="node_modules\karma-jasmine-html-reporter" t="IncludeRecursive" />
+        <e p="node_modules\node-sass" t="IncludeRecursive" />
+        <e p="node_modules\protractor" t="IncludeRecursive" />
+        <e p="node_modules\rxjs" t="IncludeRecursive" />
+        <e p="node_modules\ts-node" t="IncludeRecursive" />
+        <e p="node_modules\tslint" t="IncludeRecursive" />
+        <e p="node_modules\zone.js" t="IncludeRecursive" />
+        <e p="package-lock.json" t="Include" />
+        <e p="package.json" t="Include" />
+        <e p="protractor.conf.js" t="Include" />
+        <e p="README.md" t="Include" />
+        <e p="src" t="Include">
+          <e p="app" t="Include">
+            <e p="app.component.css" t="Include" />
+            <e p="app.component.html" t="Include" />
+            <e p="app.component.ts" t="Include" />
+            <e p="app.module.ts" t="Include" />
+            <e p="components" t="Include">
+              <e p="quiz" t="Include">
+                <e p="QuizComponent.css" t="Include" />
+                <e p="QuizComponent.html" t="Include" />
+                <e p="QuizComponent.ts" t="Include" />
+                <e p="QuizListComponent.css" t="Include" />
+                <e p="QuizListComponent.html" t="Include" />
+                <e p="QuizListComponent.ts" t="Include" />
+              </e>
+            </e>
+            <e p="home" t="Include">
+              <e p="home.component.css" t="Include" />
+              <e p="home.component.html" t="Include" />
+              <e p="home.component.ts" t="Include" />
+            </e>
+            <e p="interfaces" t="Include">
+              <e p="quiz.js" t="Include" />
+              <e p="quiz.js.map" t="Include" />
+              <e p="quiz.ts" t="Include" />
+            </e>
+            <e p="nav-menu" t="Include">
+              <e p="nav-menu.component.css" t="Include" />
+              <e p="nav-menu.component.html" t="Include" />
+              <e p="nav-menu.component.ts" t="Include" />
+            </e>
+          </e>
+          <e p="assets" t="Include">
+            <e p=".gitkeep" t="Include" />
+          </e>
+          <e p="environments" t="Include">
+            <e p="environment.prod.ts" t="Include" />
+            <e p="environment.ts" t="Include" />
+          </e>
+          <e p="index.html" t="Include" />
+          <e p="main.ts" t="Include" />
+          <e p="polyfills.ts" t="Include" />
+          <e p="styles.css" t="Include" />
+          <e p="test.ts" t="Include" />
+          <e p="tsconfig.app.json" t="Include" />
+          <e p="tsconfig.spec.json" t="Include" />
+          <e p="typings.d.ts" t="Include" />
+        </e>
+        <e p="tsconfig.json" t="Include" />
+        <e p="tslint.json" t="Include" />
+      </e>
+      <e p="Controllers" t="Include">
+        <e p="AnswerController.cs" t="Include" />
+        <e p="QuestionController.cs" t="Include" />
+        <e p="QuizController.cs" t="Include" />
+        <e p="ResultController.cs" t="Include" />
+      </e>
+      <e p="LICENSE" t="Include" />
+      <e p="Models" t="Include">
+        <e p="LogSettings.cs" t="Include" />
+        <e p="StaticFilesSettings.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp2.1" t="Include">
+            <e p="TestMakerFree.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Pages" t="Include">
+        <e p="_ViewImports.cshtml" t="Include" />
+        <e p="Error.cshtml" t="Include" />
+        <e p="Error.cshtml.cs" t="Include" />
+      </e>
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="launchSettings.json" t="Include" />
+      </e>
+      <e p="README.md" t="Include" />
+      <e p="Startup.cs" t="Include" />
+      <e p="TestMakerFree.csproj" t="IncludeRecursive" />
+      <e p="TestMakerFree.sln" t="IncludeFlat" />
+      <e p="ViewModels" t="Include">
+        <e p="AnswerViewModel.cs" t="Include" />
+        <e p="QuestionViewModel.cs" t="Include" />
+        <e p="QuizViewModel.cs" t="Include" />
+        <e p="ResultViewModel.cs" t="Include" />
+      </e>
+      <e p="wwwroot" t="Include">
+        <e p="favicon.ico" t="Include" />
+        <e p="test.html" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>

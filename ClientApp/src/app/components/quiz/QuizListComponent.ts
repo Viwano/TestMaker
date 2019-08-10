@@ -1,27 +1,44 @@
-import { Component, Inject } from "@angular/core";
+import { Component, Inject, Input } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 @Component({
-    selector: "quiz-list",
+  selector: "quiz-list",
   templateUrl: './QuizListComponent.html',
   styleUrls: ['./QuizListComponent.css']
 })
 export class QuizListComponent {
-    title: string;
-    selectedQuiz: Quiz;
-    quizzes: Quiz[];
-    constructor(http: HttpClient,
-        @Inject('BASE_URL')
-        baseUrl: string) {
+  @Input() class: string;
+  title: string;
+  selectedQuiz: Quiz;
+  quizzes: Quiz[];
+  constructor(http: HttpClient,
+    @Inject('BASE_URL')
+    baseUrl: string) {
+
+    var url = baseUrl + "api/quiz/";
+    switch (this.class) {
+      case "latest":
+      default:
         this.title = "Latest Quizzes";
-        var url = baseUrl + "api/quiz/Latest/5";
-        http.get<Quiz[]>(url).subscribe(result => {
-            this.quizzes = result;
-        }, error => console.error(error));
+        url += "Latest/5";
+        break;
+      case "byTitle":
+        this.title = "Quizzes by Title";
+        url += "ByTitle/5";
+        break;
+      case "random":
+        this.title = "Random Quizzes";
+        url += "Random/5";
+        break;
     }
-    onSelect(quiz: Quiz) {
-        this.selectedQuiz = quiz;
-        console.log("quiz with Id "
-            + this.selectedQuiz.Id
-            + " has been selected.");
-    }
+
+    http.get<Quiz[]>(url).subscribe(result => {
+      this.quizzes = result;
+    }, error => console.error(error));
+  }
+  onSelect(quiz: Quiz) {
+    this.selectedQuiz = quiz;
+    console.log("quiz with Id "
+      + this.selectedQuiz.Id
+      + " has been selected.");
+  }
 }
